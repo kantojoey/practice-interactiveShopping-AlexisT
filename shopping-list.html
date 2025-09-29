@@ -1,27 +1,38 @@
-<!-- Edit Items:
-○ When the "Edit" button is clicked:
-    ■ Replace the item text with an input field containing the current
-    text.
-    ■ Change the "Edit" button to a "Save" button.
-    ■ When "Save" is clicked, update the text -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Let's Go Shopping</title>
-    <link rel = "stylesheet" type = "text/css" href = "style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Single+Ink:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 <body>
-    <section id ="shopping-list">
-        <input type = "text" name = "new-item" id = "new-item" placeholder = "Add item here...">
-        <button id = "add">Add Item</button>
-        <section id = "full-list">
-            <ul id = "my-list">
+    <header>
+        <h1>Interactive Shopping List</h1>
+        <h2>Use the area below to update your shopping list!</h2>
+        <div class = 'spacer'></div>
+    </header>
+    <section id="shopping-list">
+        <input type="text" name="new-item" id="new-item" placeholder="Add item here...">
+        <button id="add" title="Add Item">Add Item</button>
+        <div class = 'spacer'></div>
+        <hr>
+        <div class = 'spacer'></div>
+        <section id="full-list">
+            <ul id="my-list">
             </ul>
         </section>
+        <button id="clear-all" title="Clear All">Clear All</button>
     </section>
-    <script src = "shoppingTasks.js"></script>
+    <script src="shoppingTasks.js"></script>
 </body>
+
 </html>

@@ -35,10 +35,12 @@ function createButtons(item) {
     const edit = document.createElement("button");
     edit.textContent = "Edit";
     edit.className = "edit";
+    edit.title = 'Edit';
 
     const remove = document.createElement("button");
     remove.textContent = "Remove";
     remove.className = "remove";
+    remove.title = 'Remove';
 
     item.appendChild(edit);
     item.appendChild(remove);
@@ -61,6 +63,7 @@ shoppingList.addEventListener("click", (event) => {
                 const span = li.querySelector('span');
                 const inputField = document.createElement('input');
                 inputField.type = 'text';
+                inputField.id = "new-input";
                 inputField.value = span.textContent;
                 li.insertBefore(inputField, span);
                 li.removeChild(span);
@@ -83,3 +86,10 @@ shoppingList.addEventListener("click", (event) => {
         event.target.parentElement.remove();
     };
 });
+
+
+// CLEARING ENTIRE LIST
+const clearAll = document.getElementById("clear-all");
+
+clearAll.addEventListener('click', (event)=> {
+    shoppingList.textContent = ''});
